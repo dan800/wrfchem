@@ -248,7 +248,18 @@
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">archive_dir</span> <span class="o">=</span> <span class="s1">&#39;/glade/campaign/collections/cmip/CMIP6/timeseries-cmip6/&#39;</span>
 <span class="n">monthly</span> <span class="o">=</span> <span class="s1">&#39;/atm/proc/tseries/month_1/&#39;</span>
-<span class="n">date_range</span> <span class="o">=</span> <span class="s1">&#39;.201501-206412.nc&#39;</span>
+
+<span class="c1">#SSP2-4.5, SSP3-7.0</span>
+<span class="c1">#date_range = &#39;.201501-206412.nc&#39;</span>
+
+<span class="c1">#SSP1-2.6-WACCM.001</span>
+<span class="n">date_range</span> <span class="o">=</span> <span class="s1">&#39;.201501-206501.nc&#39;</span>
+
+<span class="c1"># histgorical</span>
+<span class="c1">#/glade/campaign/collections/cmip/CMIP6/timeseries-cmip6/b.e21.BWHIST.f09_g17.CMIP6-historical-WACCM.001</span>
+<span class="c1">#/atm/proc/tseries/month_1/b.e21.BWHIST.f09_g17.CMIP6-historical-WACCM.001.cam.h0.SO2.185001-201412.nc</span>
+
+<span class="n">date_range</span> <span class="o">=</span> <span class="s1">&#39;.185001-201412.nc&#39;</span>
 </pre></div>
 </div>
 </div>
@@ -267,8 +278,10 @@ Lat 35 to 60</p>
 <span class="n">lon_min</span> <span class="o">=</span> <span class="o">-</span><span class="mf">12.</span>
 <span class="n">lon_max</span> <span class="o">=</span> <span class="mf">21.</span>
 
-<span class="n">out_start</span> <span class="o">=</span> <span class="s2">&quot;2046-01-01&quot;</span>
-<span class="n">out_stop</span> <span class="o">=</span>  <span class="s2">&quot;2055-01-01&quot;</span>
+<span class="c1">#out_start = &quot;2046-01-01&quot;</span>
+<span class="c1">#out_stop =  &quot;2055-01-01&quot;</span>
+<span class="n">out_start</span> <span class="o">=</span> <span class="s2">&quot;2006-01-01&quot;</span>
+<span class="n">out_stop</span> <span class="o">=</span>  <span class="s2">&quot;2014-12-01&quot;</span>
 </pre></div>
 </div>
 </div>
@@ -327,167 +340,135 @@ Lat 35 to 60</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#casename = &#39;b.e21.BWSSP370cmip6.f09_g17.CMIP6-SSP3-7.0-WACCM.001&#39;</span>
 <span class="c1">#outdir = &#39;SSP3-7.0-WACCM.001/&#39;</span>
 
-<span class="n">casename</span> <span class="o">=</span> <span class="s1">&#39;b.e21.BWSSP245cmip6.f09_g17.CMIP6-SSP2-4.5-WACCM.001&#39;</span>
-<span class="n">outdir</span> <span class="o">=</span> <span class="s1">&#39;SSP2-4.5-WACCM.001/&#39;</span>
+<span class="c1">#casename = &#39;b.e21.BWSSP245cmip6.f09_g17.CMIP6-SSP2-4.5-WACCM.001&#39;</span>
+<span class="c1">#outdir = &#39;SSP2-4.5-WACCM.001/&#39;</span>
+
+<span class="c1">#casename = &#39;b.e21.BWSSP126cmip6.f09_g17.CMIP6-SSP1-2.6-WACCM.001&#39;</span>
+<span class="c1">#outdir = &#39;SSP1-2.6-WACCM.001/&#39;</span>
+
+<span class="n">casename</span> <span class="o">=</span> <span class="s1">&#39;b.e21.BWHIST.f09_g17.CMIP6-historical-WACCM.001&#39;</span>
+<span class="n">outdir</span> <span class="o">=</span> <span class="s1">&#39;historical-WACCM.001/&#39;</span>
 <span class="n">process_case</span><span class="p">(</span><span class="n">casename</span><span class="p">,</span> <span class="n">outdir</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PS
-/glade/p/datashare/marsh/waccm_cmip6/SSP2-4.5-WACCM.001/b.e21.BWSSP245cmip6.f09_g17.CMIP6-SSP2-4.5-WACCM.001.cam.h0.PS.2046-01-01_2055-01-01.nc
+/glade/p/datashare/marsh/waccm_cmip6/historical-WACCM.001/b.e21.BWHIST.f09_g17.CMIP6-historical-WACCM.001.cam.h0.PS.2006-01-01_2014-12-01.nc
 BENZENE
-/glade/p/datashare/marsh/waccm_cmip6/SSP2-4.5-WACCM.001/b.e21.BWSSP245cmip6.f09_g17.CMIP6-SSP2-4.5-WACCM.001.cam.h0.BENZENE.2046-01-01_2055-01-01.nc
+/glade/p/datashare/marsh/waccm_cmip6/historical-WACCM.001/b.e21.BWHIST.f09_g17.CMIP6-historical-WACCM.001.cam.h0.BENZENE.2006-01-01_2014-12-01.nc
 BIGALK
-/glade/p/datashare/marsh/waccm_cmip6/SSP2-4.5-WACCM.001/b.e21.BWSSP245cmip6.f09_g17.CMIP6-SSP2-4.5-WACCM.001.cam.h0.BIGALK.2046-01-01_2055-01-01.nc
+/glade/p/datashare/marsh/waccm_cmip6/historical-WACCM.001/b.e21.BWHIST.f09_g17.CMIP6-historical-WACCM.001.cam.h0.BIGALK.2006-01-01_2014-12-01.nc
 BIGENE
-/glade/p/datashare/marsh/waccm_cmip6/SSP2-4.5-WACCM.001/b.e21.BWSSP245cmip6.f09_g17.CMIP6-SSP2-4.5-WACCM.001.cam.h0.BIGENE.2046-01-01_2055-01-01.nc
+/glade/p/datashare/marsh/waccm_cmip6/historical-WACCM.001/b.e21.BWHIST.f09_g17.CMIP6-historical-WACCM.001.cam.h0.BIGENE.2006-01-01_2014-12-01.nc
 C2H4
-/glade/p/datashare/marsh/waccm_cmip6/SSP2-4.5-WACCM.001/b.e21.BWSSP245cmip6.f09_g17.CMIP6-SSP2-4.5-WACCM.001.cam.h0.C2H4.2046-01-01_2055-01-01.nc
+/glade/p/datashare/marsh/waccm_cmip6/historical-WACCM.001/b.e21.BWHIST.f09_g17.CMIP6-historical-WACCM.001.cam.h0.C2H4.2006-01-01_2014-12-01.nc
 C2H5OH
-/glade/p/datashare/marsh/waccm_cmip6/SSP2-4.5-WACCM.001/b.e21.BWSSP245cmip6.f09_g17.CMIP6-SSP2-4.5-WACCM.001.cam.h0.C2H5OH.2046-01-01_2055-01-01.nc
+/glade/p/datashare/marsh/waccm_cmip6/historical-WACCM.001/b.e21.BWHIST.f09_g17.CMIP6-historical-WACCM.001.cam.h0.C2H5OH.2006-01-01_2014-12-01.nc
 C2H6
-/glade/p/datashare/marsh/waccm_cmip6/SSP2-4.5-WACCM.001/b.e21.BWSSP245cmip6.f09_g17.CMIP6-SSP2-4.5-WACCM.001.cam.h0.C2H6.2046-01-01_2055-01-01.nc
+/glade/p/datashare/marsh/waccm_cmip6/historical-WACCM.001/b.e21.BWHIST.f09_g17.CMIP6-historical-WACCM.001.cam.h0.C2H6.2006-01-01_2014-12-01.nc
 C3H6
-/glade/p/datashare/marsh/waccm_cmip6/SSP2-4.5-WACCM.001/b.e21.BWSSP245cmip6.f09_g17.CMIP6-SSP2-4.5-WACCM.001.cam.h0.C3H6.2046-01-01_2055-01-01.nc
+/glade/p/datashare/marsh/waccm_cmip6/historical-WACCM.001/b.e21.BWHIST.f09_g17.CMIP6-historical-WACCM.001.cam.h0.C3H6.2006-01-01_2014-12-01.nc
 C3H8
-/glade/p/datashare/marsh/waccm_cmip6/SSP2-4.5-WACCM.001/b.e21.BWSSP245cmip6.f09_g17.CMIP6-SSP2-4.5-WACCM.001.cam.h0.C3H8.2046-01-01_2055-01-01.nc
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">species_list</span> <span class="o">=</span> <span class="s1">&#39;../notes/waccm_species_to_select.txt&#39;</span>
-
-<span class="n">file1</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">species_list</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">species</span> <span class="ow">in</span> <span class="n">file1</span><span class="p">:</span>
-    <span class="n">field</span> <span class="o">=</span> <span class="n">species</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">field</span><span class="p">)</span>
-    <span class="n">outfile</span> <span class="o">=</span> <span class="n">datashare</span><span class="o">+</span><span class="n">outdir</span><span class="o">+</span><span class="n">casename</span><span class="o">+</span><span class="s1">&#39;.cam.h0.&#39;</span><span class="o">+</span><span class="n">field</span><span class="o">+</span><span class="s1">&#39;.&#39;</span><span class="o">+</span><span class="n">out_start</span><span class="o">+</span><span class="s1">&#39;_&#39;</span><span class="o">+</span><span class="n">out_stop</span><span class="o">+</span><span class="s1">&#39;.nc&#39;</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">outfile</span><span class="p">)</span>
-<span class="n">file1</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
- 
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PS
-/glade/p/datashare/marsh/waccm_cmip6/SSP3-7.0-WACCM.001/b.e21.BWSSP370cmip6.f09_g17.CMIP6-SSP3-7.0-WACCM.001.cam.h0.PS.2046-01-01_2055-01-01.nc
-BENZENE
-/glade/p/datashare/marsh/waccm_cmip6/SSP3-7.0-WACCM.001/b.e21.BWSSP370cmip6.f09_g17.CMIP6-SSP3-7.0-WACCM.001.cam.h0.BENZENE.2046-01-01_2055-01-01.nc
-BIGALK
-/glade/p/datashare/marsh/waccm_cmip6/SSP3-7.0-WACCM.001/b.e21.BWSSP370cmip6.f09_g17.CMIP6-SSP3-7.0-WACCM.001.cam.h0.BIGALK.2046-01-01_2055-01-01.nc
-BIGENE
-/glade/p/datashare/marsh/waccm_cmip6/SSP3-7.0-WACCM.001/b.e21.BWSSP370cmip6.f09_g17.CMIP6-SSP3-7.0-WACCM.001.cam.h0.BIGENE.2046-01-01_2055-01-01.nc
-C2H4
-/glade/p/datashare/marsh/waccm_cmip6/SSP3-7.0-WACCM.001/b.e21.BWSSP370cmip6.f09_g17.CMIP6-SSP3-7.0-WACCM.001.cam.h0.C2H4.2046-01-01_2055-01-01.nc
-C2H5OH
-/glade/p/datashare/marsh/waccm_cmip6/SSP3-7.0-WACCM.001/b.e21.BWSSP370cmip6.f09_g17.CMIP6-SSP3-7.0-WACCM.001.cam.h0.C2H5OH.2046-01-01_2055-01-01.nc
-C2H6
-/glade/p/datashare/marsh/waccm_cmip6/SSP3-7.0-WACCM.001/b.e21.BWSSP370cmip6.f09_g17.CMIP6-SSP3-7.0-WACCM.001.cam.h0.C2H6.2046-01-01_2055-01-01.nc
-C3H6
-/glade/p/datashare/marsh/waccm_cmip6/SSP3-7.0-WACCM.001/b.e21.BWSSP370cmip6.f09_g17.CMIP6-SSP3-7.0-WACCM.001.cam.h0.C3H6.2046-01-01_2055-01-01.nc
-C3H8
-/glade/p/datashare/marsh/waccm_cmip6/SSP3-7.0-WACCM.001/b.e21.BWSSP370cmip6.f09_g17.CMIP6-SSP3-7.0-WACCM.001.cam.h0.C3H8.2046-01-01_2055-01-01.nc
+/glade/p/datashare/marsh/waccm_cmip6/historical-WACCM.001/b.e21.BWHIST.f09_g17.CMIP6-historical-WACCM.001.cam.h0.C3H8.2006-01-01_2014-12-01.nc
 CH3COCH3
-/glade/p/datashare/marsh/waccm_cmip6/SSP3-7.0-WACCM.001/b.e21.BWSSP370cmip6.f09_g17.CMIP6-SSP3-7.0-WACCM.001.cam.h0.CH3COCH3.2046-01-01_2055-01-01.nc
+/glade/p/datashare/marsh/waccm_cmip6/historical-WACCM.001/b.e21.BWHIST.f09_g17.CMIP6-historical-WACCM.001.cam.h0.CH3COCH3.2006-01-01_2014-12-01.nc
 CH3OH
-/glade/p/datashare/marsh/waccm_cmip6/SSP3-7.0-WACCM.001/b.e21.BWSSP370cmip6.f09_g17.CMIP6-SSP3-7.0-WACCM.001.cam.h0.CH3OH.2046-01-01_2055-01-01.nc
+/glade/p/datashare/marsh/waccm_cmip6/historical-WACCM.001/b.e21.BWHIST.f09_g17.CMIP6-historical-WACCM.001.cam.h0.CH3OH.2006-01-01_2014-12-01.nc
 CH3OOH
-/glade/p/datashare/marsh/waccm_cmip6/SSP3-7.0-WACCM.001/b.e21.BWSSP370cmip6.f09_g17.CMIP6-SSP3-7.0-WACCM.001.cam.h0.CH3OOH.2046-01-01_2055-01-01.nc
+/glade/p/datashare/marsh/waccm_cmip6/historical-WACCM.001/b.e21.BWHIST.f09_g17.CMIP6-historical-WACCM.001.cam.h0.CH3OOH.2006-01-01_2014-12-01.nc
 CH4
-/glade/p/datashare/marsh/waccm_cmip6/SSP3-7.0-WACCM.001/b.e21.BWSSP370cmip6.f09_g17.CMIP6-SSP3-7.0-WACCM.001.cam.h0.CH4.2046-01-01_2055-01-01.nc
+/glade/p/datashare/marsh/waccm_cmip6/historical-WACCM.001/b.e21.BWHIST.f09_g17.CMIP6-historical-WACCM.001.cam.h0.CH4.2006-01-01_2014-12-01.nc
 CO
-/glade/p/datashare/marsh/waccm_cmip6/SSP3-7.0-WACCM.001/b.e21.BWSSP370cmip6.f09_g17.CMIP6-SSP3-7.0-WACCM.001.cam.h0.CO.2046-01-01_2055-01-01.nc
+/glade/p/datashare/marsh/waccm_cmip6/historical-WACCM.001/b.e21.BWHIST.f09_g17.CMIP6-historical-WACCM.001.cam.h0.CO.2006-01-01_2014-12-01.nc
 CRESOL
-/glade/p/datashare/marsh/waccm_cmip6/SSP3-7.0-WACCM.001/b.e21.BWSSP370cmip6.f09_g17.CMIP6-SSP3-7.0-WACCM.001.cam.h0.CRESOL.2046-01-01_2055-01-01.nc
+/glade/p/datashare/marsh/waccm_cmip6/historical-WACCM.001/b.e21.BWHIST.f09_g17.CMIP6-historical-WACCM.001.cam.h0.CRESOL.2006-01-01_2014-12-01.nc
 DMS
-/glade/p/datashare/marsh/waccm_cmip6/SSP3-7.0-WACCM.001/b.e21.BWSSP370cmip6.f09_g17.CMIP6-SSP3-7.0-WACCM.001.cam.h0.DMS.2046-01-01_2055-01-01.nc
+/glade/p/datashare/marsh/waccm_cmip6/historical-WACCM.001/b.e21.BWHIST.f09_g17.CMIP6-historical-WACCM.001.cam.h0.DMS.2006-01-01_2014-12-01.nc
 H2O2
-/glade/p/datashare/marsh/waccm_cmip6/SSP3-7.0-WACCM.001/b.e21.BWSSP370cmip6.f09_g17.CMIP6-SSP3-7.0-WACCM.001.cam.h0.H2O2.2046-01-01_2055-01-01.nc
+/glade/p/datashare/marsh/waccm_cmip6/historical-WACCM.001/b.e21.BWHIST.f09_g17.CMIP6-historical-WACCM.001.cam.h0.H2O2.2006-01-01_2014-12-01.nc
 HNO3
-/glade/p/datashare/marsh/waccm_cmip6/SSP3-7.0-WACCM.001/b.e21.BWSSP370cmip6.f09_g17.CMIP6-SSP3-7.0-WACCM.001.cam.h0.HNO3.2046-01-01_2055-01-01.nc
+/glade/p/datashare/marsh/waccm_cmip6/historical-WACCM.001/b.e21.BWHIST.f09_g17.CMIP6-historical-WACCM.001.cam.h0.HNO3.2006-01-01_2014-12-01.nc
 HO2NO2
-/glade/p/datashare/marsh/waccm_cmip6/SSP3-7.0-WACCM.001/b.e21.BWSSP370cmip6.f09_g17.CMIP6-SSP3-7.0-WACCM.001.cam.h0.HO2NO2.2046-01-01_2055-01-01.nc
+/glade/p/datashare/marsh/waccm_cmip6/historical-WACCM.001/b.e21.BWHIST.f09_g17.CMIP6-historical-WACCM.001.cam.h0.HO2NO2.2006-01-01_2014-12-01.nc
 HYAC
-/glade/p/datashare/marsh/waccm_cmip6/SSP3-7.0-WACCM.001/b.e21.BWSSP370cmip6.f09_g17.CMIP6-SSP3-7.0-WACCM.001.cam.h0.HYAC.2046-01-01_2055-01-01.nc
+/glade/p/datashare/marsh/waccm_cmip6/historical-WACCM.001/b.e21.BWHIST.f09_g17.CMIP6-historical-WACCM.001.cam.h0.HYAC.2006-01-01_2014-12-01.nc
 MACR
-/glade/p/datashare/marsh/waccm_cmip6/SSP3-7.0-WACCM.001/b.e21.BWSSP370cmip6.f09_g17.CMIP6-SSP3-7.0-WACCM.001.cam.h0.MACR.2046-01-01_2055-01-01.nc
+/glade/p/datashare/marsh/waccm_cmip6/historical-WACCM.001/b.e21.BWHIST.f09_g17.CMIP6-historical-WACCM.001.cam.h0.MACR.2006-01-01_2014-12-01.nc
 MEK
-/glade/p/datashare/marsh/waccm_cmip6/SSP3-7.0-WACCM.001/b.e21.BWSSP370cmip6.f09_g17.CMIP6-SSP3-7.0-WACCM.001.cam.h0.MEK.2046-01-01_2055-01-01.nc
+/glade/p/datashare/marsh/waccm_cmip6/historical-WACCM.001/b.e21.BWHIST.f09_g17.CMIP6-historical-WACCM.001.cam.h0.MEK.2006-01-01_2014-12-01.nc
 MPAN
-/glade/p/datashare/marsh/waccm_cmip6/SSP3-7.0-WACCM.001/b.e21.BWSSP370cmip6.f09_g17.CMIP6-SSP3-7.0-WACCM.001.cam.h0.MPAN.2046-01-01_2055-01-01.nc
+/glade/p/datashare/marsh/waccm_cmip6/historical-WACCM.001/b.e21.BWHIST.f09_g17.CMIP6-historical-WACCM.001.cam.h0.MPAN.2006-01-01_2014-12-01.nc
 MVK
-/glade/p/datashare/marsh/waccm_cmip6/SSP3-7.0-WACCM.001/b.e21.BWSSP370cmip6.f09_g17.CMIP6-SSP3-7.0-WACCM.001.cam.h0.MVK.2046-01-01_2055-01-01.nc
+/glade/p/datashare/marsh/waccm_cmip6/historical-WACCM.001/b.e21.BWHIST.f09_g17.CMIP6-historical-WACCM.001.cam.h0.MVK.2006-01-01_2014-12-01.nc
 N2O
-/glade/p/datashare/marsh/waccm_cmip6/SSP3-7.0-WACCM.001/b.e21.BWSSP370cmip6.f09_g17.CMIP6-SSP3-7.0-WACCM.001.cam.h0.N2O.2046-01-01_2055-01-01.nc
+/glade/p/datashare/marsh/waccm_cmip6/historical-WACCM.001/b.e21.BWHIST.f09_g17.CMIP6-historical-WACCM.001.cam.h0.N2O.2006-01-01_2014-12-01.nc
 N2O5
-/glade/p/datashare/marsh/waccm_cmip6/SSP3-7.0-WACCM.001/b.e21.BWSSP370cmip6.f09_g17.CMIP6-SSP3-7.0-WACCM.001.cam.h0.N2O5.2046-01-01_2055-01-01.nc
+/glade/p/datashare/marsh/waccm_cmip6/historical-WACCM.001/b.e21.BWHIST.f09_g17.CMIP6-historical-WACCM.001.cam.h0.N2O5.2006-01-01_2014-12-01.nc
 NH3
-/glade/p/datashare/marsh/waccm_cmip6/SSP3-7.0-WACCM.001/b.e21.BWSSP370cmip6.f09_g17.CMIP6-SSP3-7.0-WACCM.001.cam.h0.NH3.2046-01-01_2055-01-01.nc
+/glade/p/datashare/marsh/waccm_cmip6/historical-WACCM.001/b.e21.BWHIST.f09_g17.CMIP6-historical-WACCM.001.cam.h0.NH3.2006-01-01_2014-12-01.nc
 NO
-/glade/p/datashare/marsh/waccm_cmip6/SSP3-7.0-WACCM.001/b.e21.BWSSP370cmip6.f09_g17.CMIP6-SSP3-7.0-WACCM.001.cam.h0.NO.2046-01-01_2055-01-01.nc
+/glade/p/datashare/marsh/waccm_cmip6/historical-WACCM.001/b.e21.BWHIST.f09_g17.CMIP6-historical-WACCM.001.cam.h0.NO.2006-01-01_2014-12-01.nc
 NO2
-/glade/p/datashare/marsh/waccm_cmip6/SSP3-7.0-WACCM.001/b.e21.BWSSP370cmip6.f09_g17.CMIP6-SSP3-7.0-WACCM.001.cam.h0.NO2.2046-01-01_2055-01-01.nc
+/glade/p/datashare/marsh/waccm_cmip6/historical-WACCM.001/b.e21.BWHIST.f09_g17.CMIP6-historical-WACCM.001.cam.h0.NO2.2006-01-01_2014-12-01.nc
 O3
-/glade/p/datashare/marsh/waccm_cmip6/SSP3-7.0-WACCM.001/b.e21.BWSSP370cmip6.f09_g17.CMIP6-SSP3-7.0-WACCM.001.cam.h0.O3.2046-01-01_2055-01-01.nc
+/glade/p/datashare/marsh/waccm_cmip6/historical-WACCM.001/b.e21.BWHIST.f09_g17.CMIP6-historical-WACCM.001.cam.h0.O3.2006-01-01_2014-12-01.nc
 PAN
-/glade/p/datashare/marsh/waccm_cmip6/SSP3-7.0-WACCM.001/b.e21.BWSSP370cmip6.f09_g17.CMIP6-SSP3-7.0-WACCM.001.cam.h0.PAN.2046-01-01_2055-01-01.nc
+/glade/p/datashare/marsh/waccm_cmip6/historical-WACCM.001/b.e21.BWHIST.f09_g17.CMIP6-historical-WACCM.001.cam.h0.PAN.2006-01-01_2014-12-01.nc
 SO2
-/glade/p/datashare/marsh/waccm_cmip6/SSP3-7.0-WACCM.001/b.e21.BWSSP370cmip6.f09_g17.CMIP6-SSP3-7.0-WACCM.001.cam.h0.SO2.2046-01-01_2055-01-01.nc
+/glade/p/datashare/marsh/waccm_cmip6/historical-WACCM.001/b.e21.BWHIST.f09_g17.CMIP6-historical-WACCM.001.cam.h0.SO2.2006-01-01_2014-12-01.nc
 TOLUENE
-/glade/p/datashare/marsh/waccm_cmip6/SSP3-7.0-WACCM.001/b.e21.BWSSP370cmip6.f09_g17.CMIP6-SSP3-7.0-WACCM.001.cam.h0.TOLUENE.2046-01-01_2055-01-01.nc
+/glade/p/datashare/marsh/waccm_cmip6/historical-WACCM.001/b.e21.BWHIST.f09_g17.CMIP6-historical-WACCM.001.cam.h0.TOLUENE.2006-01-01_2014-12-01.nc
 bc_a1
-/glade/p/datashare/marsh/waccm_cmip6/SSP3-7.0-WACCM.001/b.e21.BWSSP370cmip6.f09_g17.CMIP6-SSP3-7.0-WACCM.001.cam.h0.bc_a1.2046-01-01_2055-01-01.nc
+/glade/p/datashare/marsh/waccm_cmip6/historical-WACCM.001/b.e21.BWHIST.f09_g17.CMIP6-historical-WACCM.001.cam.h0.bc_a1.2006-01-01_2014-12-01.nc
 bc_a4
-/glade/p/datashare/marsh/waccm_cmip6/SSP3-7.0-WACCM.001/b.e21.BWSSP370cmip6.f09_g17.CMIP6-SSP3-7.0-WACCM.001.cam.h0.bc_a4.2046-01-01_2055-01-01.nc
+/glade/p/datashare/marsh/waccm_cmip6/historical-WACCM.001/b.e21.BWHIST.f09_g17.CMIP6-historical-WACCM.001.cam.h0.bc_a4.2006-01-01_2014-12-01.nc
 dst_a1
-/glade/p/datashare/marsh/waccm_cmip6/SSP3-7.0-WACCM.001/b.e21.BWSSP370cmip6.f09_g17.CMIP6-SSP3-7.0-WACCM.001.cam.h0.dst_a1.2046-01-01_2055-01-01.nc
+/glade/p/datashare/marsh/waccm_cmip6/historical-WACCM.001/b.e21.BWHIST.f09_g17.CMIP6-historical-WACCM.001.cam.h0.dst_a1.2006-01-01_2014-12-01.nc
 dst_a2
-/glade/p/datashare/marsh/waccm_cmip6/SSP3-7.0-WACCM.001/b.e21.BWSSP370cmip6.f09_g17.CMIP6-SSP3-7.0-WACCM.001.cam.h0.dst_a2.2046-01-01_2055-01-01.nc
+/glade/p/datashare/marsh/waccm_cmip6/historical-WACCM.001/b.e21.BWHIST.f09_g17.CMIP6-historical-WACCM.001.cam.h0.dst_a2.2006-01-01_2014-12-01.nc
 dst_a3
-/glade/p/datashare/marsh/waccm_cmip6/SSP3-7.0-WACCM.001/b.e21.BWSSP370cmip6.f09_g17.CMIP6-SSP3-7.0-WACCM.001.cam.h0.dst_a3.2046-01-01_2055-01-01.nc
+/glade/p/datashare/marsh/waccm_cmip6/historical-WACCM.001/b.e21.BWHIST.f09_g17.CMIP6-historical-WACCM.001.cam.h0.dst_a3.2006-01-01_2014-12-01.nc
 ncl_a1
-/glade/p/datashare/marsh/waccm_cmip6/SSP3-7.0-WACCM.001/b.e21.BWSSP370cmip6.f09_g17.CMIP6-SSP3-7.0-WACCM.001.cam.h0.ncl_a1.2046-01-01_2055-01-01.nc
+/glade/p/datashare/marsh/waccm_cmip6/historical-WACCM.001/b.e21.BWHIST.f09_g17.CMIP6-historical-WACCM.001.cam.h0.ncl_a1.2006-01-01_2014-12-01.nc
 ncl_a2
-/glade/p/datashare/marsh/waccm_cmip6/SSP3-7.0-WACCM.001/b.e21.BWSSP370cmip6.f09_g17.CMIP6-SSP3-7.0-WACCM.001.cam.h0.ncl_a2.2046-01-01_2055-01-01.nc
+/glade/p/datashare/marsh/waccm_cmip6/historical-WACCM.001/b.e21.BWHIST.f09_g17.CMIP6-historical-WACCM.001.cam.h0.ncl_a2.2006-01-01_2014-12-01.nc
 ncl_a3
-/glade/p/datashare/marsh/waccm_cmip6/SSP3-7.0-WACCM.001/b.e21.BWSSP370cmip6.f09_g17.CMIP6-SSP3-7.0-WACCM.001.cam.h0.ncl_a3.2046-01-01_2055-01-01.nc
+/glade/p/datashare/marsh/waccm_cmip6/historical-WACCM.001/b.e21.BWHIST.f09_g17.CMIP6-historical-WACCM.001.cam.h0.ncl_a3.2006-01-01_2014-12-01.nc
 num_a1
-/glade/p/datashare/marsh/waccm_cmip6/SSP3-7.0-WACCM.001/b.e21.BWSSP370cmip6.f09_g17.CMIP6-SSP3-7.0-WACCM.001.cam.h0.num_a1.2046-01-01_2055-01-01.nc
+/glade/p/datashare/marsh/waccm_cmip6/historical-WACCM.001/b.e21.BWHIST.f09_g17.CMIP6-historical-WACCM.001.cam.h0.num_a1.2006-01-01_2014-12-01.nc
 num_a2
-/glade/p/datashare/marsh/waccm_cmip6/SSP3-7.0-WACCM.001/b.e21.BWSSP370cmip6.f09_g17.CMIP6-SSP3-7.0-WACCM.001.cam.h0.num_a2.2046-01-01_2055-01-01.nc
+/glade/p/datashare/marsh/waccm_cmip6/historical-WACCM.001/b.e21.BWHIST.f09_g17.CMIP6-historical-WACCM.001.cam.h0.num_a2.2006-01-01_2014-12-01.nc
 num_a3
-/glade/p/datashare/marsh/waccm_cmip6/SSP3-7.0-WACCM.001/b.e21.BWSSP370cmip6.f09_g17.CMIP6-SSP3-7.0-WACCM.001.cam.h0.num_a3.2046-01-01_2055-01-01.nc
+/glade/p/datashare/marsh/waccm_cmip6/historical-WACCM.001/b.e21.BWHIST.f09_g17.CMIP6-historical-WACCM.001.cam.h0.num_a3.2006-01-01_2014-12-01.nc
 pom_a1
-/glade/p/datashare/marsh/waccm_cmip6/SSP3-7.0-WACCM.001/b.e21.BWSSP370cmip6.f09_g17.CMIP6-SSP3-7.0-WACCM.001.cam.h0.pom_a1.2046-01-01_2055-01-01.nc
+/glade/p/datashare/marsh/waccm_cmip6/historical-WACCM.001/b.e21.BWHIST.f09_g17.CMIP6-historical-WACCM.001.cam.h0.pom_a1.2006-01-01_2014-12-01.nc
 so4_a1
-/glade/p/datashare/marsh/waccm_cmip6/SSP3-7.0-WACCM.001/b.e21.BWSSP370cmip6.f09_g17.CMIP6-SSP3-7.0-WACCM.001.cam.h0.so4_a1.2046-01-01_2055-01-01.nc
+/glade/p/datashare/marsh/waccm_cmip6/historical-WACCM.001/b.e21.BWHIST.f09_g17.CMIP6-historical-WACCM.001.cam.h0.so4_a1.2006-01-01_2014-12-01.nc
 so4_a2
-/glade/p/datashare/marsh/waccm_cmip6/SSP3-7.0-WACCM.001/b.e21.BWSSP370cmip6.f09_g17.CMIP6-SSP3-7.0-WACCM.001.cam.h0.so4_a2.2046-01-01_2055-01-01.nc
+/glade/p/datashare/marsh/waccm_cmip6/historical-WACCM.001/b.e21.BWHIST.f09_g17.CMIP6-historical-WACCM.001.cam.h0.so4_a2.2006-01-01_2014-12-01.nc
 so4_a3
-/glade/p/datashare/marsh/waccm_cmip6/SSP3-7.0-WACCM.001/b.e21.BWSSP370cmip6.f09_g17.CMIP6-SSP3-7.0-WACCM.001.cam.h0.so4_a3.2046-01-01_2055-01-01.nc
+/glade/p/datashare/marsh/waccm_cmip6/historical-WACCM.001/b.e21.BWHIST.f09_g17.CMIP6-historical-WACCM.001.cam.h0.so4_a3.2006-01-01_2014-12-01.nc
 soa1_a1
-/glade/p/datashare/marsh/waccm_cmip6/SSP3-7.0-WACCM.001/b.e21.BWSSP370cmip6.f09_g17.CMIP6-SSP3-7.0-WACCM.001.cam.h0.soa1_a1.2046-01-01_2055-01-01.nc
+/glade/p/datashare/marsh/waccm_cmip6/historical-WACCM.001/b.e21.BWHIST.f09_g17.CMIP6-historical-WACCM.001.cam.h0.soa1_a1.2006-01-01_2014-12-01.nc
 soa1_a2
-/glade/p/datashare/marsh/waccm_cmip6/SSP3-7.0-WACCM.001/b.e21.BWSSP370cmip6.f09_g17.CMIP6-SSP3-7.0-WACCM.001.cam.h0.soa1_a2.2046-01-01_2055-01-01.nc
+/glade/p/datashare/marsh/waccm_cmip6/historical-WACCM.001/b.e21.BWHIST.f09_g17.CMIP6-historical-WACCM.001.cam.h0.soa1_a2.2006-01-01_2014-12-01.nc
 soa2_a1
-/glade/p/datashare/marsh/waccm_cmip6/SSP3-7.0-WACCM.001/b.e21.BWSSP370cmip6.f09_g17.CMIP6-SSP3-7.0-WACCM.001.cam.h0.soa2_a1.2046-01-01_2055-01-01.nc
+/glade/p/datashare/marsh/waccm_cmip6/historical-WACCM.001/b.e21.BWHIST.f09_g17.CMIP6-historical-WACCM.001.cam.h0.soa2_a1.2006-01-01_2014-12-01.nc
 soa2_a2
-/glade/p/datashare/marsh/waccm_cmip6/SSP3-7.0-WACCM.001/b.e21.BWSSP370cmip6.f09_g17.CMIP6-SSP3-7.0-WACCM.001.cam.h0.soa2_a2.2046-01-01_2055-01-01.nc
+/glade/p/datashare/marsh/waccm_cmip6/historical-WACCM.001/b.e21.BWHIST.f09_g17.CMIP6-historical-WACCM.001.cam.h0.soa2_a2.2006-01-01_2014-12-01.nc
 soa3_a1
-/glade/p/datashare/marsh/waccm_cmip6/SSP3-7.0-WACCM.001/b.e21.BWSSP370cmip6.f09_g17.CMIP6-SSP3-7.0-WACCM.001.cam.h0.soa3_a1.2046-01-01_2055-01-01.nc
+/glade/p/datashare/marsh/waccm_cmip6/historical-WACCM.001/b.e21.BWHIST.f09_g17.CMIP6-historical-WACCM.001.cam.h0.soa3_a1.2006-01-01_2014-12-01.nc
 soa3_a2
-/glade/p/datashare/marsh/waccm_cmip6/SSP3-7.0-WACCM.001/b.e21.BWSSP370cmip6.f09_g17.CMIP6-SSP3-7.0-WACCM.001.cam.h0.soa3_a2.2046-01-01_2055-01-01.nc
+/glade/p/datashare/marsh/waccm_cmip6/historical-WACCM.001/b.e21.BWHIST.f09_g17.CMIP6-historical-WACCM.001.cam.h0.soa3_a2.2006-01-01_2014-12-01.nc
 soa4_a1
-/glade/p/datashare/marsh/waccm_cmip6/SSP3-7.0-WACCM.001/b.e21.BWSSP370cmip6.f09_g17.CMIP6-SSP3-7.0-WACCM.001.cam.h0.soa4_a1.2046-01-01_2055-01-01.nc
+/glade/p/datashare/marsh/waccm_cmip6/historical-WACCM.001/b.e21.BWHIST.f09_g17.CMIP6-historical-WACCM.001.cam.h0.soa4_a1.2006-01-01_2014-12-01.nc
 soa4_a2
-/glade/p/datashare/marsh/waccm_cmip6/SSP3-7.0-WACCM.001/b.e21.BWSSP370cmip6.f09_g17.CMIP6-SSP3-7.0-WACCM.001.cam.h0.soa4_a2.2046-01-01_2055-01-01.nc
+/glade/p/datashare/marsh/waccm_cmip6/historical-WACCM.001/b.e21.BWHIST.f09_g17.CMIP6-historical-WACCM.001.cam.h0.soa4_a2.2006-01-01_2014-12-01.nc
 soa5_a1
-/glade/p/datashare/marsh/waccm_cmip6/SSP3-7.0-WACCM.001/b.e21.BWSSP370cmip6.f09_g17.CMIP6-SSP3-7.0-WACCM.001.cam.h0.soa5_a1.2046-01-01_2055-01-01.nc
+/glade/p/datashare/marsh/waccm_cmip6/historical-WACCM.001/b.e21.BWHIST.f09_g17.CMIP6-historical-WACCM.001.cam.h0.soa5_a1.2006-01-01_2014-12-01.nc
 soa5_a2
-/glade/p/datashare/marsh/waccm_cmip6/SSP3-7.0-WACCM.001/b.e21.BWSSP370cmip6.f09_g17.CMIP6-SSP3-7.0-WACCM.001.cam.h0.soa5_a2.2046-01-01_2055-01-01.nc
+/glade/p/datashare/marsh/waccm_cmip6/historical-WACCM.001/b.e21.BWHIST.f09_g17.CMIP6-historical-WACCM.001.cam.h0.soa5_a2.2006-01-01_2014-12-01.nc
 </pre></div>
 </div>
 </div>
